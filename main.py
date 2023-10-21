@@ -90,7 +90,8 @@ def help_command(message):
 def help_command(message):
     bot.send_message(message.chat.id, "Я словно камень брошенный, Живу один под своей звездой.", reply_markup=menu_keyboard)  # Можно менять текст
 
-    bot.add_custom_filter(custom_filters.StateFilter(bot))
-    bot.add_custom_filter(custom_filters.TextMatchFilter())
 
-    bot.infinity_polling()
+bot.add_custom_filter(custom_filters.StateFilter(bot))
+bot.add_custom_filter(custom_filters.TextMatchFilter())
+
+bot.infinity_polling()
